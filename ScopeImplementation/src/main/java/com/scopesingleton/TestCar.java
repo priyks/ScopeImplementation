@@ -3,7 +3,14 @@ package com.scopesingleton;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
+/**
+ * this class to test the scope of bean according scope type singleton and prototype
+Singleton: Only one instance will be created for a single bean definition per Spring IoC container and the same 
+object will be shared for each request made for that bean.
+Prototype: A new instance will be created for a single bean definition every time a request is made for that bean.
+ * @author priyankaku
+ *
+ */
 public class TestCar {
 
 	public static void main(String[] args) {
