@@ -8,17 +8,25 @@
  http://www.springframework.org/schema/beans/spring-beans.xsd
  http://www.springframework.org/schema/context
    http://www.springframework.org/schema/context/spring-context.xsd">
- <context:annotation-config></context:annotation-config>  <!-- it has alternative way to turn on annotation for specific bean -->
-  <!--it will enable all the annotations present in the project   -->
-  <bean id="pepsi" class="bean.lifecycleInterface.Pepsi">
-   <property name="price" value="10"></property>
-   </bean>  
-   
-     <bean id="example" class="bean.lifecycleInterface.Example" >
-   <property name="subject" value="Chemistry"></property>
-   </bean>
-   <!-- <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean> -->
-	 <bean id="example1" class="bean.lifecycleInterface.Example">
-   <property name="subject" value="math"></property>
-   </bean>
+	<context:annotation-config></context:annotation-config>
+	<!--it will enable all the annotations present in the project -->
+	
+	
+	<bean id="pepsi" class="bean.lifecycleInterface.Pepsi">
+		<property name="price" value="10"></property>
+	</bean>
+
+	<bean id="example" class="bean.lifecycleInterface.Example">
+		<property name="subject" value="Chemistry"></property>
+	</bean>
+	
+	<!-- it has alternative way to turn on annotation for bean annotated with 
+		@PostConstruct and @PreDestory using CommonAnnotationBeanPostProcessor -->
+		
+	<!-- <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean> -->
+	
+	<bean id="example1" class="bean.lifecycleInterface.Example">
+		<property name="subject" value="math"></property>
+	</bean>
+	
 </beans> 
