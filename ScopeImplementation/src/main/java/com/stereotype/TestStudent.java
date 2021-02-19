@@ -11,6 +11,8 @@ public class TestStudent {
 		  ApplicationContext context=new ClassPathXmlApplicationContext("com/stereotype/sereotypeConfig.xml");
 		  Student student=context.getBean("studentObj",Student.class);
 		  System.out.println(student);
+		  System.out.println(student.getPhoneNo());
+		  System.out.println(student.getPhoneNo().getClass().getName());
 	}
 
 }
