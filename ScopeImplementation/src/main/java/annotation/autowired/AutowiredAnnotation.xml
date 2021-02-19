@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context.xsd">
+
+<context:annotation-config/>
+	
+	<bean id="addresstemp" class="annotation.autowired.Address">
+	<property name="street" value="Shahu College Road"></property>
+	<property name="city" value="Pune"></property>
+	</bean>
+	
+	<bean id="address" class="annotation.autowired.Address">
+	<qualifier value="temp"></qualifier>
+	<property name="street" value="Shivaji chowk"></property>
+	<property name="city" value="Beed"></property>
+	</bean>
+	
+	<bean id="employee" class="annotation.autowired.Employee" ></bean>
+	
+	
+	
+</beans> 
